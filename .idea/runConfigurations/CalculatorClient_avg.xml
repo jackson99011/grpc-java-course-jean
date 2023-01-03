@@ -3,7 +3,7 @@
     <option name="ALTERNATIVE_JRE_PATH" value="17" />
     <option name="MAIN_CLASS_NAME" value="calculator.client.CalculatorClient" />
     <module name="grpc-java-course.main" />
-    <option name="PROGRAM_PARAMETERS" value="sum" />
+    <option name="PROGRAM_PARAMETERS" value="avg" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

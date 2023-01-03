@@ -23,7 +23,7 @@ public final class CalculatorClient {
         System.out.println("Enter doPrimes");
         CalculatorServiceGrpc.CalculatorServiceBlockingStub stub = CalculatorServiceGrpc.newBlockingStub(channel);
 
-        stub.primes(PrimeRequest.newBuilder().setNumber(567890).build()).forEachRemaining(response ->
+        stub.primes(PrimeRequest.newBuilder().setNumber(120).build()).forEachRemaining(response ->
             System.out.println(response.getPrimeFactor())
         );
     }
@@ -47,8 +47,8 @@ public final class CalculatorClient {
                 latch.countDown();
             }
         });
-
-        IntStream.range(1, 11).forEach(number ->
+        //range 表示由1開始到小於4的整數
+        IntStream.range(1, 4).forEach(number ->
             stream.onNext(AvgRequest.newBuilder().setNumber(number).build())
         );
 
